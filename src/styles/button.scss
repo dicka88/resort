@@ -1,0 +1,47 @@
+.btn,
+button {
+  cursor: pointer;
+  padding: 0.75em 1em;
+  text-align: center;
+}
+
+.btn.primary,
+button.primary {
+  display: inline-block;
+  background-color: var(--primary);
+  border: 2px solid black;
+  color: black;
+  &:hover {
+    background-color: var(--primary-light);
+  }
+}
+
+.btn.secondary,
+button.secondary {
+  display: inline-block;
+  background-color: var(--secondary);
+  border: 2px solid black;
+  color: black;
+  &:hover {
+    background-color: var(--secondary-light);
+  }
+}
+
+.fab {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  color: gray;
+
+  &.fab-primary {
+    background-color: var(--secondary);
+    color: red;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .fab {
+    bottom: 4em;
+    right: 4em;
+  }
+}
