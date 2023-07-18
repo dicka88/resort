@@ -13,8 +13,8 @@ export const generateDetailTemplate = ({
   customerReviews,
 }) => `
   <div class="">
-    <div class="my-4">
-      <a href="/#/">
+    <div class="my-2">
+      <a href="/#/" class="detail__back">
         <svg svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 11.25a.75.75 0 0 1 0 1.5h-9.25V18a.75.75 0 0 1-1.28.53l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.28.53v5.25H20Z"/></svg>
         Go Back
       </a>
@@ -90,7 +90,7 @@ export const generateDetailTemplate = ({
             ${customerReviews.map((customer) => `
               <div class="flex gap-4">
                 <div>
-                  <img src="https://cdn.statically.io/avatar/shape=circle/${customer.name}" height="50" width="50" style="min-height: 50px; min-width: 50px;" />
+                  <img src="https://cdn.statically.io/avatar/shape=circle/${customer.name}" alt="${customer.name}" height="50" width="50" style="min-height: 50px; min-width: 50px;" />
                 </div>
                 <div>
                   <div class="mb-2">

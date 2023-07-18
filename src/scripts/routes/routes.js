@@ -1,6 +1,6 @@
-import Index from '../views';
-import Detail from '../views/detail';
-import Favorite from '../views/favorite';
+import Index from '../pages';
+import Detail from '../pages/detail';
+import Favorite from '../pages/favorite';
 
 const routes = {
   '/': Index,
