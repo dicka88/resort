@@ -1,8 +1,11 @@
+import CategorySource from '../data/categories-source';
 import RestaurantSource from '../data/restaurants-source';
 import RESTAURANT_IMAGE from '../globals/restaurant-image-endpoint';
 
 const Index = {
   async render() {
+    const categories = CategorySource.getCategories();
+
     return `
       <!-- hero  -->
       <section class="hero relative">
@@ -17,70 +20,13 @@ const Index = {
         <div class="container">
           <h2>Categories</h2>
           <div class="py-2 gap-4">
-            <a href="#">
-              <div class="relative category overflow-hidden rounded-md text-center">
-                <img src="./category/cafe.png" class="aspect-square" alt="Cafe">
-                <div class="absolute bottom-0 w-full text-white p-2 description">
-                  <p>Cafe</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="relative category overflow-hidden rounded-md text-center">
-                <img src="./category/fast-food.png" class="aspect-square" alt="Fast Food">
-                <div class="absolute bottom-0 w-full text-white p-2 description">
-                  <p>Fast Food</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="relative category overflow-hidden rounded-md text-center">
-                <img src="./category/fine-dining.png" class="aspect-square" alt="Fine Dining">
-                <div class="absolute bottom-0 w-full text-white p-2 description">
-                  <p>Fine Dining</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="relative category overflow-hidden rounded-md text-center">
-                <img src="./category/japanese.png" class="aspect-square" alt="Japanese">
-                <div class="absolute bottom-0 w-full text-white p-2 description">
-                  <p>Japanese</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="relative category overflow-hidden rounded-md text-center">
-                <img src="./category/middle-eastern.png" class="aspect-square" alt="Middle Eastern">
-                <div class="absolute bottom-0 w-full text-white p-2 description">
-                  <p>Middle Eastern</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="relative category overflow-hidden rounded-md text-center">
-                <img src="./category/padang.png" class="aspect-square" alt="Padang">
-                <div class="absolute bottom-0 w-full text-white p-2 description">
-                  <p>Padang</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="relative category overflow-hidden rounded-md text-center">
-                <img src="./category/sea-food.png" class="aspect-square" alt="Sea Food">
-                <div class="absolute bottom-0 w-full text-white p-2 description">
-                  <p>Sea Food</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="relative category overflow-hidden rounded-md text-center">
-                <img src="./category/others.png" class="aspect-square" alt="">
-                <div class="absolute bottom-0 w-full text-white p-2 description">
-                  <p>Others</p>
-                </div>
-              </div>
-            </a>
+            ${categories.map((category) => `
+              <category-item
+                href="${category.href}"
+                name="${category.name}"
+                src="${category.src}"
+              ></category-item>
+            `).join('')}
           </div>
         </div>
       </section>

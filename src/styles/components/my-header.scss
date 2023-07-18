@@ -41,7 +41,7 @@
     }
   }
 
-  nav {
+  nav#drawer {
     clip-path: circle(25px at calc(100% - 45px) 45px);
     position: fixed;
     top: 0;
@@ -126,16 +126,22 @@
   .app-bar {
     .nav-menu {
       display: flex;
-      gap: 2em;
-      a {
-        text-decoration: none;
-        color: white;
-        padding: 1em 1.5em;
-        border-bottom: 2px solid transparent;
-        transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      ul {
+        gap: 2em;
+        list-style: none;
+        li {
+          display: inline-block;
+          a {
+            text-decoration: none;
+            color: white;
+            padding: 1em 1.5em;
+            border-bottom: 2px solid transparent;
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-        &:hover {
-          border-bottom-color: var(--primary);
+            &:hover {
+              border-bottom-color: var(--primary);
+            }
+          }
         }
       }
     }

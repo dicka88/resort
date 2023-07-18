@@ -9,18 +9,20 @@ class MyHeader extends HTMLElement {
               Resort
             </a>
           </div>
-          <div class="nav-menu">
-            <a href="/">Home</a>
-            <a href="/#/favorite">Favorite</a>
-            <a href="https://dickaismaji.com">About Us</a>
-          </div>
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="/#">Home</a></li>
+              <li><a href="/#/favorite">Favorite</a></li>
+              <li><a href="https://dickaismaji.com" target="_blank">About Us</a></li>
+            </ul>
+          </nav>
           <div class="btn-menu-wrapper">
             <button class="btn-menu" id="btn-menu" aria-label="Show the menus">
               ≡
             </button>
           </div>
         </div>
-        <nav>
+        <nav id="drawer">
           <div class="auth">
             <a href="#/signin" class="btn primary"> Signin </a>
             <a href="#/signup" class="btn secondary"> Signup </a>
@@ -28,16 +30,16 @@ class MyHeader extends HTMLElement {
           <div class="container">
             <a href="/#">Home</a>
             <a href="/#/favorite">Favorite</a>
-            <a href="https://dickaismaji.com">About Us</a>
+            <a href="https://dickaismaji.com" target="_blank">About Us</a>
           </div>
         </nav>
       </header>
     `;
 
     this.$btnMenu = this.querySelector('#btn-menu');
-    this.$nav = this.querySelector('nav');
+    this.$drawer = this.querySelector('#drawer');
     this.$appBar = this.querySelector('.app-bar');
-    this.$navLinks = this.querySelectorAll('nav a');
+    this.$navLinks = this.querySelectorAll('#drawer a');
 
     // button menu click
     this.$btnMenu.addEventListener('click', this.toggleNavMenu.bind(this));
@@ -50,14 +52,14 @@ class MyHeader extends HTMLElement {
   }
 
   toggleNavMenu() {
-    if (this.$nav.classList.contains('open')) {
+    if (this.$drawer.classList.contains('open')) {
       this.$btnMenu.textContent = '≡';
     } else {
       this.$btnMenu.textContent = '×';
     }
 
     // open/close the menu
-    this.$nav.classList.toggle('open');
+    this.$drawer.classList.toggle('open');
   }
 
   onWindowScroll() {
