@@ -51,37 +51,37 @@ const Index = {
           <div class="grid grid-cols-2 gap-2">
             <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./images/city/jakarta.png);">
+                style="background-image: url(./images/city/jakarta.webp);">
                 Jakarta
               </div>
             </a>
             <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./images/city/bandung.png);">
+                style="background-image: url(./images/city/bandung.webp);">
                 Bandung
               </div>
             </a>
             <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./images/city/semarang.png);">
+                style="background-image: url(./images/city/semarang.webp);">
                 Semarang
               </div>
             </a>
             <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./images/city/yogyakarta.png);">
+                style="background-image: url(./images/city/yogyakarta.webp);">
                 Yogyakarta
               </div>
             </a>
             <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./images/city/surabaya.png);">
+                style="background-image: url(./images/city/surabaya.webp);">
                 Surabaya
               </div>
             </a>
             <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./images/city/others.png);">
+                style="background-image: url(./images/city/others.webp);">
                 Others
               </div>
             </a>
