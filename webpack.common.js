@@ -20,8 +20,11 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
+          // {
+          //   loader: MiniCssExtractPlugin.loader
+          // },
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: 'style-loader',
           },
           {
             loader: 'css-loader',
@@ -88,8 +91,8 @@ module.exports = {
       ],
       overrideExtension: true,
     }),
-    new MiniCssExtractPlugin({
-      filename: "main.css"
-    })
+    // new MiniCssExtractPlugin({
+    //   filename: "main.css"
+    // })
   ],
 };
