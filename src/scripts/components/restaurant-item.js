@@ -18,8 +18,8 @@ class RestaurantItem extends HTMLElement {
         <div class="relative">
           <div class="restaurant-item__thumbnail">
             <picture>
-              <source media="(max-width: 375px)" type="image/jpg" data-rcset="${RESTAURANT_IMAGE.small(this.pictureId)}" />
-              <source media="(max-width: 992px)" type="image/jpg" data-srcset="${RESTAURANT_IMAGE.medium(this.pictureId)}" />
+              <source media="(max-width: 480px)" type="image/jpg" data-rcset="${RESTAURANT_IMAGE.small(this.pictureId)}" />
+              <source media="(max-width: 768px)" type="image/jpg" data-srcset="${RESTAURANT_IMAGE.medium(this.pictureId)}" />
               <img
                 class="lazyload"
                 data-src="${RESTAURANT_IMAGE.large(this.pictureId)}"

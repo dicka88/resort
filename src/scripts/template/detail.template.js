@@ -22,7 +22,7 @@ export const generateDetailTemplate = ({
     <div class="relative">
       <picture class="detail__thumbnail">
         <source type="image/png" media="(max-width: 480px)" srcset="${RESTAURANT_IMAGE.small(pictureId)}" />
-        <source type="image/png" media="(max-width: 800px)" srcset="${RESTAURANT_IMAGE.medium(pictureId)}" />
+        <source type="image/png" media="(max-width: 768px)" srcset="${RESTAURANT_IMAGE.medium(pictureId)}" />
         <img data-src="${RESTAURANT_IMAGE.large(pictureId)}" alt="${name}" class="lazyload" />
       </picture>
       <div class="detail__rating">
