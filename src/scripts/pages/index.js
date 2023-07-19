@@ -10,7 +10,11 @@ const Index = {
       <section class="hero relative">
         <div class="hero__wrapper">
           <picture>
-            <source type="image/webp" srcset="./images/heros/hero-image_2.webp" />
+            <source media="(max-width: 480px)" type="image/webp" srcset="./images/heros/hero-image_2-small.webp" />
+            <source media="(max-width: 768px)" type="image/webp" srcset="./images/heros/hero-image_2-medium.webp" />
+            <source media="(max-width: 1920px)" type="image/webp" srcset="./images/heros/hero-image_2.webp" />
+            <source media="(max-width: 480px)" type="image/jpg" srcset="./images/heros/hero-image_2-small.jpg" />
+            <source media="(max-width: 768px)" type="image/jpg" srcset="./images/heros/hero-image_2-medium.jpg" />
             <img src="./images/heros/hero-image_2.jpg" alt="" />
           </picture>
         </div>
