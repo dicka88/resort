@@ -1,4 +1,8 @@
 class NoResultFound extends HTMLElement {
+  static get tag() {
+    return 'no-result-found'
+  }
+
   constructor() {
     super();
 
@@ -17,4 +21,4 @@ class NoResultFound extends HTMLElement {
   }
 }
 
-customElements.define('no-result-found', NoResultFound);
+customElements.define(NoResultFound.tag, NoResultFound);

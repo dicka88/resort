@@ -1,6 +1,10 @@
 const { default: RESTAURANT_IMAGE } = require("../globals/restaurant-image-endpoint");
 
 class RestaurantItem extends HTMLElement {
+  static get tag() {
+    return 'restaurant-item'
+  }
+
   constructor() {
     super();
 
@@ -55,4 +59,4 @@ class RestaurantItem extends HTMLElement {
   }
 }
 
-customElements.define('restaurant-item', RestaurantItem);
+customElements.define(RestaurantItem.tag, RestaurantItem);

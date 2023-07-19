@@ -1,4 +1,8 @@
 class CategoryItem extends HTMLElement {
+  static get tag() {
+    return 'category-item'
+  }
+
   constructor() {
     super();
 
@@ -23,4 +27,4 @@ class CategoryItem extends HTMLElement {
   }
 }
 
-customElements.define('category-item', CategoryItem);
+customElements.define(CategoryItem.tag, CategoryItem);

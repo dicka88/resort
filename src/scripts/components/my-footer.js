@@ -1,4 +1,8 @@
 class MyFooter extends HTMLElement {
+  static get tag() {
+    return 'my-footer'
+  }
+
   connectedCallback() {
     this.innerHTML = `
       <footer>
@@ -110,4 +114,4 @@ class MyFooter extends HTMLElement {
   }
 }
 
-customElements.define('my-footer', MyFooter);
+customElements.define(MyFooter.tag, MyFooter);

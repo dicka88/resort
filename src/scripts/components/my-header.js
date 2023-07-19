@@ -1,4 +1,8 @@
 class MyHeader extends HTMLElement {
+  static get tag() {
+    return 'my-header'
+  }
+
   connectedCallback() {
     this.innerHTML = `
       <header class="app-bar">
@@ -73,4 +77,4 @@ class MyHeader extends HTMLElement {
   }
 }
 
-customElements.define('my-header', MyHeader);
+customElements.define(MyHeader.tag, MyHeader);

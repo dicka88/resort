@@ -1,6 +1,10 @@
 import FavoriteRestaurantDb from '../data/idb-favorite-restaurant';
 
-class FabFavoriteRestaurant extends HTMLElement {
+export class FabFavoriteRestaurant extends HTMLElement {
+  static get tag() {
+    return 'fab-favorite-restaurant'
+  }
+  
   constructor() {
     super();
 
@@ -46,4 +50,4 @@ class FabFavoriteRestaurant extends HTMLElement {
   }
 }
 
-customElements.define('fab-favorite-restaurant', FabFavoriteRestaurant);
+customElements.define(FabFavoriteRestaurant.tag, FabFavoriteRestaurant);

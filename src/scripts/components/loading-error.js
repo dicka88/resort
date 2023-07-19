@@ -1,4 +1,8 @@
 class LoadingError extends HTMLElement {
+  static get tag() {
+    return 'loading-error'
+  }
+
   connectedCallback() {
     this.innerHTML = `
       <div class="flex justify-center error py-10 loading-error">
@@ -11,4 +15,4 @@ class LoadingError extends HTMLElement {
   }
 }
 
-customElements.define('loading-error', LoadingError);
+customElements.define(LoadingError.tag, LoadingError);

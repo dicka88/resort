@@ -1,4 +1,8 @@
 class NotFound404 extends HTMLElement {
+  static get tag() {
+    return 'not-found-404'
+  }
+
   connectedCallback() {
     this.innerHTML = `
       <div class="flex justify-center error py-10 loading-error">
@@ -11,4 +15,4 @@ class NotFound404 extends HTMLElement {
   }
 }
 
-customElements.define('not-found-404', NotFound404);
+customElements.define(NotFound404.tag, NotFound404);
