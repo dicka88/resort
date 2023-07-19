@@ -2,6 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
+    jasmine: true,
+    'codeceptjs/codeceptjs': true,
   },
   extends: [
     'airbnb-base',
@@ -17,4 +20,5 @@ module.exports = {
     'no-restricted-globals': 0,
     'linebreak-style': 0,
   },
+  plugins: ["jasmine", "codeceptjs"]
 };
