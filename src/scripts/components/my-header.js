@@ -4,7 +4,7 @@ class MyHeader extends HTMLElement {
       <header class="app-bar">
         <div class="container flex">
           <div>
-            <a href="/" class="logo">
+            <a href="/#" class="logo">
               <img src="/logo-white.svg" alt="Resort" />
               Resort
             </a>
@@ -17,7 +17,7 @@ class MyHeader extends HTMLElement {
             </ul>
           </nav>
           <div class="btn-menu-wrapper">
-            <button class="btn-menu" id="btn-menu" aria-label="Show the menus">
+            <button class="btn-menu-toggle" id="btn-menu-toggle" aria-label="Show the menus">
               ≡
             </button>
           </div>
@@ -36,13 +36,13 @@ class MyHeader extends HTMLElement {
       </header>
     `;
 
-    this.$btnMenu = this.querySelector('#btn-menu');
+    this.$btnMenuToggle = this.querySelector('#btn-menu-toggle');
     this.$drawer = this.querySelector('#drawer');
     this.$appBar = this.querySelector('.app-bar');
     this.$navLinks = this.querySelectorAll('#drawer a');
 
     // button menu click
-    this.$btnMenu.addEventListener('click', this.toggleNavMenu.bind(this));
+    this.$btnMenuToggle.addEventListener('click', this.toggleNavMenu.bind(this));
     this.$navLinks.forEach((link) => {
       link.addEventListener('click', this.toggleNavMenu.bind(this));
     });
@@ -53,9 +53,9 @@ class MyHeader extends HTMLElement {
 
   toggleNavMenu() {
     if (this.$drawer.classList.contains('open')) {
-      this.$btnMenu.textContent = '≡';
+      this.$btnMenuToggle.textContent = '≡';
     } else {
-      this.$btnMenu.textContent = '×';
+      this.$btnMenuToggle.textContent = '×';
     }
 
     // open/close the menu
