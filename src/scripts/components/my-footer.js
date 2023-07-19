@@ -13,7 +13,7 @@ class MyFooter extends HTMLElement {
             </div>
 
             <div class="navigation">
-              <h5>Places</h5>
+              <p class="title">Places</p>
               <div>
                 <a href="#">Jakarta</a>
                 <a href="#">Bandung</a>
@@ -27,7 +27,7 @@ class MyFooter extends HTMLElement {
             </div>
 
             <div class="navigation">
-              <h5>Category</h5>
+              <p class="title">Category</p>
               <div>
                 <a href="#">Seafood</a>
                 <a href="#">Local</a>
@@ -40,7 +40,7 @@ class MyFooter extends HTMLElement {
             </div>
 
             <div class="social-media">
-              <h5 class="pb-2">Our Social Media</h5>
+              <p class="title pb-2">Our Social Media</p>
               <div class="flex gap-4">
                 <a href="#" aria-label="Facebook">
                   <svg
