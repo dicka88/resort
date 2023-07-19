@@ -4,6 +4,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -20,7 +22,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           {
-            loader: 'style-loader',
+            loader: MiniCssExtractPlugin.loader
           },
           {
             loader: 'css-loader',
@@ -64,5 +66,9 @@ module.exports = {
       ],
       overrideExtension: true,
     }),
+    new BundleAnalyzerPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "main.css"
+    })
   ],
 };
