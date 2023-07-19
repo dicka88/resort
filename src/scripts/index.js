@@ -11,6 +11,7 @@ import './components/no-result-found';
 import './components/not-found-404';
 
 import App from './app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   content: document.querySelector('#main'),
@@ -18,6 +19,7 @@ const app = new App({
 
 window.addEventListener('load', async () => {
   app.renderPage();
+  swRegister()
 });
 
 window.addEventListener('hashchange', () => {
