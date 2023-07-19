@@ -1,4 +1,7 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+/* for async await transpile */
 import '../styles/main.scss';
 
 import './components/my-header';

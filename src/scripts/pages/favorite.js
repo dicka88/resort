@@ -1,5 +1,4 @@
 import FavoriteRestaurantDb from '../data/idb-favorite-restaurant';
-import RESTAURANT_IMAGE from '../globals/restaurant-image-endpoint';
 
 const Favorite = {
   async render() {
@@ -31,7 +30,7 @@ const Favorite = {
     const restaurantHTML = favorites.map((item) => `
       <restaurant-item
         id="${item.id}"
-        src="${RESTAURANT_IMAGE.medium(item.pictureId)}"
+        pictureId="${item.pictureId}"
         name="${item.name}"
         city="${item.city}"
         rating="${item.rating}"

@@ -1,6 +1,5 @@
 import CategorySource from '../data/categories-source';
 import RestaurantSource from '../data/restaurants-source';
-import RESTAURANT_IMAGE from '../globals/restaurant-image-endpoint';
 
 const Index = {
   async render() {
@@ -9,7 +8,12 @@ const Index = {
     return `
       <!-- hero  -->
       <section class="hero relative">
-        <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
+        <div class="hero__wrapper">
+          <picture>
+            <source type="image/webp" srcset="./images/heros/hero-image_2.webp" />
+            <img src="./images/heros/hero-image_2.jpg" alt="" />
+          </picture>
+        </div>
         <div class="absolute text">
           <h1>Resort</h1>
           <p>Discover your best restaurant everywhere</p>
@@ -45,39 +49,39 @@ const Index = {
         <div class="container">
           <h2>City</h3>
           <div class="grid grid-cols-2 gap-2">
-            <a href="#">
+            <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./city/jakarta.png);">
+                style="background-image: url(./images/city/jakarta.png);">
                 Jakarta
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./city/bandung.png);">
+                style="background-image: url(./images/city/bandung.png);">
                 Bandung
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./city/semarang.png);">
+                style="background-image: url(./images/city/semarang.png);">
                 Semarang
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./city/yogyakarta.png);">
+                style="background-image: url(./images/city/yogyakarta.png);">
                 Yogyakarta
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./city/surabaya.png);">
+                style="background-image: url(./images/city/surabaya.png);">
                 Surabaya
               </div>
             </a>
-            <a href="#">
+            <a href="#" class="rounded-md" style="background: #e8e8e8;">
               <div class="p-2 border rounded-md flex items-center justify-center"
-                style="background-image: url(./city/others.png);">
+                style="background-image: url(./images/city/others.png);">
                 Others
               </div>
             </a>
@@ -126,7 +130,7 @@ const Index = {
     const restaurantHTML = restaurants.restaurants.map((item) => `
       <restaurant-item
         id="${item.id}"
-        src="${RESTAURANT_IMAGE.medium(item.pictureId)}"
+        pictureId="${item.pictureId}"
         name="${item.name}"
         city="${item.city}"
         rating="${item.rating}"

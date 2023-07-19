@@ -15,11 +15,17 @@
   }
 }
 
-.detail__hero {
+.detail__thumbnail {
+  background: #e8e8e8;
   max-height: 300px;
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
+  border-radius: 12px;
+  overflow: hidden;
+
+  img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .detail__rating {

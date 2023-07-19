@@ -20,7 +20,11 @@ export const generateDetailTemplate = ({
       </a>
     </div>
     <div class="relative">
-      <img src="${RESTAURANT_IMAGE.medium(pictureId)}" alt="${name}" class="detail__hero" />
+      <picture class="detail__thumbnail">
+        <source type="image/png" media="(max-width: 480px)" srcset="${RESTAURANT_IMAGE.small(pictureId)}" />
+        <source type="image/png" media="(max-width: 800px)" srcset="${RESTAURANT_IMAGE.medium(pictureId)}" />
+        <img data-src="${RESTAURANT_IMAGE.large(pictureId)}" alt="${name}" class="lazyload" />
+      </picture>
       <div class="detail__rating">
         ${city} | 
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#f7cb3c" viewBox="0 0 16 16">

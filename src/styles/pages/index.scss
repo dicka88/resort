@@ -3,13 +3,16 @@
   background: linear-gradient(180deg, #12151a, #252a3477 50%, #12151a);
   color: white;
 
-  img {
-    max-height: 400px;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(0.5);
+  .hero__wrapper > picture {
+    height: 350px;
+    background-color: #e8e8e8;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.5);
+    }
   }
 
   .text {
@@ -58,34 +61,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
-
-    .restaurant-item {
-      border-radius: 8px;
-      border: 1px solid #e8e8e8;
-
-      & > div {
-        border-radius: 8px;
-        overflow: hidden;
-        img {
-          max-height: 300px;
-          aspect-ratio: 16 / 9;
-        }
-        .rating {
-          padding-top: 2em;
-          background: linear-gradient(0deg, #12151a 0%, transparent);
-        }
-      }
-
-      .description {
-        a {
-          font-size: 18px;
-          color: black;
-          font-weight: 600;
-          display: block;
-          padding: 0.5em 0;
-        }
-      }
-    }
   }
 }
 

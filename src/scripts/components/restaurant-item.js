@@ -1,10 +1,12 @@
+const { default: RESTAURANT_IMAGE } = require("../globals/restaurant-image-endpoint");
+
 class RestaurantItem extends HTMLElement {
   constructor() {
     super();
 
     this.id = this.getAttribute('id');
     this.name = this.getAttribute('name');
-    this.src = this.getAttribute('src');
+    this.pictureId = this.getAttribute('pictureId');
     this.city = this.getAttribute('city');
     this.rating = this.getAttribute('rating');
     this.description = this.getAttribute('description');
@@ -14,10 +16,17 @@ class RestaurantItem extends HTMLElement {
     const template = `
       <div class="restaurant-item">
         <div class="relative">
-          <img
-            src="${this.src}"
-            alt="${this.name}"
-          />
+          <div class="restaurant-item__thumbnail">
+            <picture>
+              <source media="(max-width: 375px)" type="image/jpg" data-rcset="${RESTAURANT_IMAGE.small(this.pictureId)}" />
+              <source media="(max-width: 992px)" type="image/jpg" data-srcset="${RESTAURANT_IMAGE.medium(this.pictureId)}" />
+              <img
+                class="lazyload"
+                data-src="${RESTAURANT_IMAGE.large(this.pictureId)}"
+                alt="${this.name}"
+              />
+            </picture>
+          </div>
           <div class="absolute bottom-0 text-white w-full">
             <div class="flex space-between w-full p-3 rating">
               <div class="flex items-center gap-1">

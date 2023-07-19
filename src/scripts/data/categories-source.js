@@ -2,35 +2,35 @@ const CategorySource = {
   getCategories() {
     return [{
       href: '#',
-      src: './category/cafe.png',
+      src: './images/category/cafe.png',
       name: 'Cafe',
     }, {
       href: '#',
-      src: './category/fast-food.png',
+      src: './images/category/fast-food.png',
       name: 'Fast Food',
     }, {
       href: '#',
-      src: '/category/fine-dining.png',
+      src: '/images/category/fine-dining.png',
       name: 'Fine Dining',
     }, {
       href: '#',
-      src: './category/japanese.png',
+      src: './images/category/japanese.png',
       name: 'Japanese',
     }, {
       href: '#',
-      src: './category/middle-eastern.png',
+      src: './images/category/middle-eastern.png',
       name: 'Middle Eastern',
     }, {
       href: '#',
-      src: './category/padang.png',
+      src: './images/category/padang.png',
       name: 'Padang',
     }, {
       href: '#',
-      src: './category/sea-food.png',
+      src: './images/category/sea-food.png',
       name: 'Sea Food',
     }, {
       href: '#',
-      src: './category/others.png',
+      src: './images/category/others.png',
       name: 'Others',
     }];
   },
