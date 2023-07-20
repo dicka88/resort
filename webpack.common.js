@@ -5,6 +5,7 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: {
@@ -90,6 +91,10 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "main.css"
-    })
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+      openAnalyzer: false
+    }),
   ],
 };
