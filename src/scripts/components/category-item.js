@@ -1,6 +1,6 @@
 class CategoryItem extends HTMLElement {
   static get tag() {
-    return 'category-item'
+    return 'category-item';
   }
 
   constructor() {

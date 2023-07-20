@@ -24,6 +24,15 @@ class App {
 
     this._content.innerHTML = pageHTML;
     await page.afterRender();
+
+    const skipLink = document.querySelector('.skip-to-main-content-link');
+    const mainContent = document.querySelector('#main');
+
+    skipLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      mainContent.scrollIntoView({ behavior: 'smooth' });
+      skipLink.blur();
+    });
   }
 }
 

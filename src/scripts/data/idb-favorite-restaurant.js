@@ -22,9 +22,9 @@ const FavoriteRestaurantDb = {
   },
   async putRestaurant(restaurant) {
     if (!restaurant.id) return;
-    if (restaurant.id === "NaN") return;
+    if (restaurant.id === 'NaN') return;
 
-    return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
+    (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
   },
   async deleteRestaurant(id) {
     return (await dbPromise).delete(OBJECT_STORE_NAME, id);

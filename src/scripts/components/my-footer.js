@@ -1,6 +1,6 @@
 class MyFooter extends HTMLElement {
   static get tag() {
-    return 'my-footer'
+    return 'my-footer';
   }
 
   connectedCallback() {

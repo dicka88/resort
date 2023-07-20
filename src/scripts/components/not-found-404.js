@@ -1,6 +1,6 @@
 class NotFound404 extends HTMLElement {
   static get tag() {
-    return 'not-found-404'
+    return 'not-found-404';
   }
 
   connectedCallback() {

@@ -1,6 +1,6 @@
 class MyHeader extends HTMLElement {
   static get tag() {
-    return 'my-header'
+    return 'my-header';
   }
 
   connectedCallback() {

@@ -1,7 +1,6 @@
 import RESTAURANT_IMAGE from '../globals/restaurant-image-endpoint';
 
 export const generateDetailTemplate = ({
-  id,
   name,
   rating,
   city,

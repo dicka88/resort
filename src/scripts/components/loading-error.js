@@ -1,6 +1,6 @@
 class LoadingError extends HTMLElement {
   static get tag() {
-    return 'loading-error'
+    return 'loading-error';
   }
 
   connectedCallback() {

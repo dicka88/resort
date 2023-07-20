@@ -1,8 +1,8 @@
-const { default: RESTAURANT_IMAGE } = require("../globals/restaurant-image-endpoint");
+const { default: RESTAURANT_IMAGE } = require('../globals/restaurant-image-endpoint');
 
 class RestaurantItem extends HTMLElement {
   static get tag() {
-    return 'restaurant-item'
+    return 'restaurant-item';
   }
 
   constructor() {

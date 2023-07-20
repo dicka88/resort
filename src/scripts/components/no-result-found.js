@@ -1,6 +1,6 @@
 class NoResultFound extends HTMLElement {
   static get tag() {
-    return 'no-result-found'
+    return 'no-result-found';
   }
 
   constructor() {

@@ -20,7 +20,7 @@ const app = new App({
 
 window.addEventListener('load', async () => {
   app.renderPage();
-  swRegister()
+  swRegister();
 });
 
 window.addEventListener('hashchange', () => {

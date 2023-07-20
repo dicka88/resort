@@ -124,13 +124,13 @@ const Detail = {
 
     try {
       const response = await RestaurantSource.getRestaurantDetail(url.id);
-      
+
       if (response.error) {
         document.querySelector('#detail').innerHTML = '<loading-error></loading-error>';
         return;
       }
 
-      this.restaurant = response.restaurant 
+      this.restaurant = response.restaurant;
 
       this.renderRestaurant(this.restaurant);
 
@@ -139,7 +139,7 @@ const Detail = {
 
       // button toggle
       FavoriteButtonPresenter.init({
-        container: document.querySelector("#favorite-button-container"),
+        container: document.querySelector('#favorite-button-container'),
         favoriteRestaurantIdb: FavoriteRestaurantDb,
         restaurant: {
           id: this.restaurant.id,
@@ -147,9 +147,9 @@ const Detail = {
           name: this.restaurant.name,
           city: this.restaurant.city,
           rating: this.restaurant.rating,
-          description: this.restaurant.description
-        }
-      })
+          description: this.restaurant.description,
+        },
+      });
     } catch (error) {
       console.log(error);
     }
