@@ -1,4 +1,6 @@
+import FavoriteRestaurantDb from '../data/idb-favorite-restaurant';
 import RestaurantSource from '../data/restaurants-source';
+import FavoriteButtonPresenter from '../presenters/favorite-button.presenter';
 import UrlParser from '../routes/url-parser';
 import { generateDetailTemplate } from '../template/detail.template';
 
@@ -121,18 +123,33 @@ const Detail = {
     this.id = url.id;
 
     try {
-      this.restaurant = await RestaurantSource.getRestaurantDetail(url.id);
-
-      if (this.restaurant.error) {
+      const response = await RestaurantSource.getRestaurantDetail(url.id);
+      
+      if (response.error) {
         document.querySelector('#detail').innerHTML = '<loading-error></loading-error>';
         return;
       }
 
-      this.renderRestaurant(this.restaurant.restaurant);
+      this.restaurant = response.restaurant 
+
+      this.renderRestaurant(this.restaurant);
 
       const $customerSubmit = document.querySelector('button[type=submit]');
-
       $customerSubmit.addEventListener('click', this.handleCustomerReviewSubmit.bind(this));
+
+      // button toggle
+      FavoriteButtonPresenter.init({
+        container: document.querySelector("#favorite-button-container"),
+        favoriteRestaurantIdb: FavoriteRestaurantDb,
+        restaurant: {
+          id: this.restaurant.id,
+          pictureId: this.restaurant.pictureId,
+          name: this.restaurant.name,
+          city: this.restaurant.city,
+          rating: this.restaurant.rating,
+          description: this.restaurant.description
+        }
+      })
     } catch (error) {
       console.log(error);
     }
@@ -158,7 +175,7 @@ const Detail = {
       });
 
       this.renderRestaurant({
-        ...this.restaurant.restaurant,
+        ...this.restaurant,
         customerReviews: response.customerReviews,
       });
     }

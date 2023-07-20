@@ -7,7 +7,6 @@ import './components/my-header';
 import './components/my-footer';
 import './components/restaurant-item';
 import './components/category-item';
-import './components/fab-favorite-restaurant';
 import './components/loading-error';
 import './components/no-result-found';
 import './components/not-found-404';

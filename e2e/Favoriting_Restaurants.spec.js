@@ -22,9 +22,9 @@ Scenario('favoriting one restaurant', async ({ I }) => {
   const firstRestoTitle = await I.grabTextFrom(firstResto);
   I.click(firstResto);
 
-  I.waitForElement("#like-button");
-  I.seeElement('#like-button');
-  I.click('#like-button');
+  I.waitForElement("#favorite-button");
+  I.seeElement('#favorite-button');
+  I.click('#favorite-button');
 
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurant-item a');
@@ -45,9 +45,9 @@ Scenario('unfavoriting one restaurant', async ({ I }) => {
   const firstResto = locate('.restaurant-item a').first();
   I.click(firstResto);
 
-  I.waitForElement("#like-button");
-  I.seeElement('#like-button');
-  I.click('#like-button');
+  I.waitForElement("#favorite-button");
+  I.seeElement('#favorite-button');
+  I.click('#favorite-button');
 
   I.amOnPage('/#/favorite');
   I.seeElement('.restaurant-item a');
@@ -56,9 +56,9 @@ Scenario('unfavoriting one restaurant', async ({ I }) => {
 
   I.click(firstFavoritedResto)
 
-  I.waitForElement("#like-button")
-  I.seeElement('#like-button');
-  I.click('#like-button');
+  I.waitForElement("#favorite-button")
+  I.seeElement('#favorite-button');
+  I.click('#favorite-button');
 
   I.amOnPage('/#/favorite');
 

@@ -119,14 +119,8 @@ export const generateDetailTemplate = ({
         </div>
       </div>
     </div>
-    <fab-favorite-restaurant
-      id="${id}"
-      pictureId="${pictureId}"
-      name="${name}"
-      city="${city}"
-      rating="${rating}"
-      description="${description}"
-    ></fab-favorite-restaurant>
+    <div id="favorite-button-container">
+    </div>
   </div>
   `;
 

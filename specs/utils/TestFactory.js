@@ -1,14 +1,16 @@
-const { FabFavoriteRestaurant } = require("../../src/scripts/components/fab-favorite-restaurant");
+import FavoriteRestaurantDb from "../../src/scripts/data/idb-favorite-restaurant";
+import FavoriteButtonPresenter from "../../src/scripts/presenters/favorite-button.presenter";
 
 const TestFactories = {
   async createLikeButton(restaurant) {
-    await import('../../src/scripts/components/fab-favorite-restaurant')
-    
-    document.body.innerHTML = `<fab-favorite-restaurant id="${restaurant.id}"></fab-favorite-restaurant>`
+    document.body.innerHTML = '<div id="favorite-button-container"></div>';
 
-    await new Promise(resolve => setTimeout(resolve, 200))
+    await FavoriteButtonPresenter.init({
+      container: document.querySelector("#favorite-button-container"),
+      favoriteRestaurantIdb: FavoriteRestaurantDb,
+      restaurant
+    })
 
-    return document.querySelector(FabFavoriteRestaurant.tag)
   }
 }
 
