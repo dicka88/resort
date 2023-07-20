@@ -22,6 +22,7 @@ const FavoriteRestaurantDb = {
   },
   async putRestaurant(restaurant) {
     if (!restaurant.id) return;
+    if (restaurant.id === "NaN") return;
 
     return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
   },

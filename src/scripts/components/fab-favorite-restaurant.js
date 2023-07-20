@@ -8,7 +8,7 @@ export class FabFavoriteRestaurant extends HTMLElement {
   constructor() {
     super();
 
-    this.id = this.getAttribute('id');
+    this.id = parseInt(this.getAttribute('id') || 0);
     this.pictureId = this.getAttribute('pictureId');
     this.name = this.getAttribute('name');
     this.city = this.getAttribute('city');
