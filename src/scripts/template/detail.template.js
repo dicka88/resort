@@ -98,10 +98,10 @@ export const generateDetailTemplate = ({
                 </div>
                 <div>
                   <div class="mb-2">
-                    <h4 class="py-0">${customer.name}</h4>
+                    <h4 class="py-0 customer__name">${customer.name}</h4>
                     <span class="text-gray">${customer.date}</span>
                   </div>
-                  <p>${customer.review}</p>
+                  <p class="customer__review">${customer.review}</p>
                 </div>
               </div>
             `).join('')}

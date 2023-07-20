@@ -107,16 +107,6 @@ const Detail = {
                       </div>
                     </div>
                   </div>
-                  <div class="mb-4 p-4 rounded bg-gray detail__review">
-                    <h4>Add your review</h4>
-                    <form>
-                      <input name="name" placeholder="Enter your name" />
-                      <textarea name="review" placeholder="Enter your review"></textarea>
-                      <button class="btn primary w-full">
-                        Submit
-                      </button>
-                    </form>
-                  </div>
                 </div>
               </div>
             </div>
